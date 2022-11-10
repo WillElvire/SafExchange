@@ -1,11 +1,11 @@
-# VUE BOILERPLATE
+# SAFE EXCHANGE
 
 ## Usage
 
 Clone this project by running:
 
 ```sh
-git clone https://github.com/WillElvire/vue-starter-pack
+git clone https://github.com/WillElvire/SafExchange
 ```
 ## Project setup
 
