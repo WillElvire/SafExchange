@@ -1,28 +1,31 @@
 <template>
+  
   <n-config-provider :theme-overrides="themeOverrides">
     <n-notification-provider>
-      <n-message-provider>
+      <n-message-provider >
         <n-dialog-provider>
           <div class="min-h-screen">
-            <component :is="layout" />
+               <component :is="layout" />
           </div>
         </n-dialog-provider>
       </n-message-provider>
     </n-notification-provider>
   </n-config-provider>
+
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-
 import { themeOverrides } from './config'
 import { useUserStore } from '@/stores/user'
-
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import AuthLayout from '@/layouts/AuthLayout.vue'
 import PageLayout from '@/layouts/PageLayout.vue'
-import { NConfigProvider, NDialogProvider, NMessageProvider, NNotificationProvider } from 'naive-ui'
+import { NConfigProvider, NDialogProvider, NMessageProvider, NNotificationProvider   } from 'naive-ui'
+
+
+
 
 export default defineComponent({
   name: 'App',
@@ -35,12 +38,14 @@ export default defineComponent({
     DefaultLayout,
     AuthLayout,
     PageLayout,
+
   },
 
   setup() {
+
     const route = useRoute()
     const userStore = useUserStore()
-
+    const placementRef = 'left'
     const layout = ref(route.meta.layout)
 
     watch(
@@ -63,7 +68,7 @@ export default defineComponent({
       { deep: true }
     )
 
-    return { themeOverrides, layout }
+    return { themeOverrides, layout , placement: placementRef, }
   },
 })
 </script>

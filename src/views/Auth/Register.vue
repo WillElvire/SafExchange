@@ -7,8 +7,8 @@
       >
         <div class="flex flex-col w-full md:w-1/2 p-4">
           <div class="flex flex-col flex-1 justify-center mb-8">
-            <h1 class="text-4xl text-center font-thin">Inscrivez vous !</h1>
-
+            <h1 class="text-4xl text-center mt-4"> <router-link to="/landing">SafExchange</router-link></h1>
+            <p class="text-1xl text-center">Inscription</p>
             <div class="w-full mt-4">
               <div class="my-4">
                 <!--<div class="mb-4 flex justify-center">
@@ -62,9 +62,9 @@
               </form>
 
               <div class="text-center mt-4">
-                <a class="no-underline hover:underline text-blue-dark text-xs" href="/">
+                <router-link class="no-underline hover:underline text-blue-dark text-xs" to="/forgot-password">
                   Mot de passe oublié?
-                </a>
+                </router-link>
               </div>
 
                <div class="text-center mt-4">

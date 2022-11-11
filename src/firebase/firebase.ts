@@ -1,5 +1,3 @@
-import { DocumentToSign, SignedDocument } from '@/stores/document'
-import { User } from '@/stores/user'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'

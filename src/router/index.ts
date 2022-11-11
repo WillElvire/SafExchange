@@ -4,7 +4,10 @@ import Dashboard from '@/views/Dashboard/Dashboard.vue'
 
 
 export const routes: Array<RouteRecordRaw> = [
-  { path: '/', redirect: { name: 'landing' } },
+  { 
+    path: '/',
+    redirect: { name: 'landing' } 
+  },
   {
     path: '/landing',
     component: () => import('@/views/Pages/Landing.vue'),

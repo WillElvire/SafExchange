@@ -11,7 +11,6 @@ const api = new Http();
 export const  SendOtpToUser = async (email: string) => {
     return  api.post(endpoint.authenticate.SEND_OTP, { email })
 }
-
 /** this function is to login the customer */
 export const LoginUser = async (LoginPayload: LoginPayload) => {
     return  api.post(endpoint.authenticate.LOGIN, {...LoginPayload})

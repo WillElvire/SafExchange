@@ -7,7 +7,9 @@
       >
         <div class="flex flex-col w-full md:w-1/2 p-4">
           <div class="flex flex-col flex-1 justify-center mb-8">
-            <h1 class="text-4xl text-center font-thin">Connexion !</h1>
+            <h1 class="text-4xl text-center"> <router-link to="/landing">SafExchange</router-link></h1>
+            <p class="text-1xl text-center">Login</p>
+            <!--<h1 class="text-2xl text-center mt-4 font-thin">Connexion !</h1>!-->
 
             <div class="w-full mt-4">
               <div class="my-4">
@@ -53,9 +55,9 @@
               </form>
 
               <div class="text-center mt-4">
-                <a class="no-underline hover:underline text-blue-dark text-xs" href="/">
+                <router-link class="no-underline hover:underline text-blue-dark text-xs" to="/forgot-password">
                   Mot de passe oublié?
-                </a>
+                </router-link>
               </div>
 
                 <div class="text-center mt-4">
@@ -113,7 +115,8 @@ export default defineComponent({
     })
 
     const login = async () => {
-      if (!form.value.email || !form.value.password) {
+      if (!form.value.email || !form.value.password) 
+      {
         window.$message.error("Le mot de passe ou l'email n'est pas correcte.")
         return
       }

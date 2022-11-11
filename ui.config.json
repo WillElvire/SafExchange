@@ -1,8 +1,8 @@
 {
   "colors": {
     "primary": {
-      "DEFAULT": "#ffb700",
-      "focus": "#ff9900",
+      "DEFAULT": "#000000",
+      "focus": "#000000",
       "content": "#ffffff"
     },
 

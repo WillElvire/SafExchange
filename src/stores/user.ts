@@ -1,6 +1,5 @@
 // @ts-check
 import { defineStore } from 'pinia'
-import * as fb from '@/firebase/firebase'
 import { LoginPayload, RegisterPayload, User } from '@/interfaces'
 import { LoginUser, LogoutUser, RegisterUser } from '@/functions/Auth'
 
