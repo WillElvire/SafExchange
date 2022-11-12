@@ -1,10 +1,9 @@
 <template>
   <div id="pag-layout">
+    <n-layout position="absolute">
       <navbar />
-    <n-layout position="relative">
-    
-      <root/>
-      <footer-component/>
+      <root />
+      <footer-component />
     </n-layout>
   </div>
 </template>
@@ -21,7 +20,7 @@ export default defineComponent({
     Root,
     NLayout,
     Navbar,
-    FooterComponent
+    FooterComponent,
   },
 })
 </script>

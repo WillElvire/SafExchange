@@ -7,14 +7,14 @@
       <!-- navbar -->
       <nav class="flex justify-between bg-gray-900 text-white w-screen">
         <div class="px-5 xl:px-12 py-6 flex w-full items-center">
-          <a class="text-3xl font-bold font-heading" href="#">
+          <a class="text-3xl font-bold font-heading" >
             <!-- <img class="h-9" src="logo.png" alt="logo"> -->
-           SafExchange
+           <router-link to="landing">SafExchange</router-link>
           </a>
           <!-- Nav Links -->
           <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
             <li><a class="hover:text-gray-200" href="#">Accueil</a></li>
-            <li><a class="hover:text-gray-200" href="#">Recherche</a></li>
+            <li><router-link class="hover:text-gray-200" to="market-place">Marketplace</router-link></li>
             <li><a class="hover:text-gray-200" href="#">Cotation</a></li>
             <li><a class="hover:text-gray-200" href="#">Contacts</a></li>
           </ul>
@@ -53,9 +53,11 @@
               </span>
             </a>
             <!-- Sign In / Register      -->
+            <router-link to="/login" >
             <n-button class="flex items-center hover:text-gray-200 text-white" >
-             <router-link to="/login" > se connecter</router-link> 
+              se connecter
             </n-button>
+            </router-link> 
           </div>
         </div>
         <!-- Responsive navbar -->

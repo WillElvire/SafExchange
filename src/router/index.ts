@@ -6,7 +6,7 @@ import Dashboard from '@/views/Dashboard/Dashboard.vue'
 export const routes: Array<RouteRecordRaw> = [
   { 
     path: '/',
-    redirect: { name: 'landing' } 
+    redirect: { name: 'marketplace' } 
   },
   {
     path: '/landing',
@@ -22,6 +22,14 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'login',
     meta: {
       layout: 'AuthLayout',
+    },
+  },
+  {
+    path: '/market-place',
+    component: () => import('@/views/Pages/MarketPlace.vue'),
+    name: 'marketplace',
+    meta: {
+      layout: 'PageLayout',
     },
   },
   {

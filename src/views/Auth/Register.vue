@@ -7,7 +7,9 @@
       >
         <div class="flex flex-col w-full md:w-1/2 p-4">
           <div class="flex flex-col flex-1 justify-center mb-8">
-            <h1 class="text-4xl text-center mt-4"> <router-link to="/landing">SafExchange</router-link></h1>
+            <h1 class="text-4xl text-center mt-4">
+              <router-link to="/landing">SafExchange</router-link>
+            </h1>
             <p class="text-1xl text-center">Inscription</p>
             <div class="w-full mt-4">
               <div class="my-4">
@@ -17,7 +19,7 @@
                       <n-icon>
                         <brand-google />
                       </n-icon>
-                    </template>
+                    </template>x
                     Se connecter avec Google
                   </n-button>
                 </div>
@@ -29,7 +31,6 @@
                 </div>!-->
               </div>
               <form class="form-horizontal w-3/4 mx-auto" method="POST" action="#">
-
                 <div class="flex flex-col mt-4">
                   <n-input v-model:value="form.name" required placeholder="votre nom" />
                 </div>
@@ -40,7 +41,7 @@
                 <div class="flex flex-col mt-4">
                   <n-input v-model:value="form.email" required placeholder="votre Email" />
                 </div>
-                
+
                 <div class="flex flex-col mt-4">
                   <n-input
                     type="password"
@@ -58,17 +59,22 @@
                 <div class="flex flex-col mt-8">
                   <n-button type="primary" @click="register"> Se connecter </n-button>
                 </div>
-                
               </form>
 
               <div class="text-center mt-4">
-                <router-link class="no-underline hover:underline text-blue-dark text-xs" to="/forgot-password">
+                <router-link
+                  class="no-underline hover:underline text-blue-dark text-xs"
+                  to="/forgot-password"
+                >
                   Mot de passe oublié?
                 </router-link>
               </div>
 
-               <div class="text-center mt-4">
-                <router-link class="no-underline hover:underline text-blue-dark text-xs" to="/login">
+              <div class="text-center mt-4">
+                <router-link
+                  class="no-underline hover:underline text-blue-dark text-xs"
+                  to="/login"
+                >
                   se connecter
                 </router-link>
               </div>
@@ -120,30 +126,26 @@ export default defineComponent({
       email: null,
       password: null,
       rememberMe: false,
-      name:null,
-      phoneNumber:null,
+      name: null,
+      phoneNumber: null,
     })
 
     const register = async () => {
-
       if (!form.value.email || !form.value.password || !form.value.name) {
-        window.$message.error("Merci de renseigner tous les champs.")
+        window.$message.error('Merci de renseigner tous les champs.')
         return
       }
 
       const registerPayload = {
-
-        email       : form.value?.email,
-        password    : form.value?.password,
-        phoneNumber : form.value?.phoneNumber,
-        name        : form.value?.name
-
+        email: form.value?.email,
+        password: form.value?.password,
+        phoneNumber: form.value?.phoneNumber,
+        name: form.value?.name,
       }
 
-      await userStore.register(registerPayload).then(()=>{
-         router.push('/')
+      await userStore.register(registerPayload).then(() => {
+        router.push('/')
       })
-
     }
 
     return {

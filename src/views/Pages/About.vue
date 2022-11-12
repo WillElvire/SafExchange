@@ -171,13 +171,12 @@
     <n-modal v-model:show="showModal">
       <n-card
         style="width: 600px"
-        title="Modal"
         :bordered="true"
         size="huge"
         role="dialog"
         aria-modal="true"
       >
-        sksk
+       <buy-crypto/>
       </n-card>
     </n-modal>
   </section>
@@ -204,11 +203,12 @@ import { NButton, NModal, NCard } from 'naive-ui'
 import BuyCrypto from '@/components/widgets/BuyCrypto.vue'
 
 export default defineComponent({
-  name: 'Landing',
+  name: 'About',
   components: {
     NButton,
     NModal,
     NCard,
+    BuyCrypto
   },
   setup() {
     return {
